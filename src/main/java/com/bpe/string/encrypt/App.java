@@ -1,6 +1,6 @@
 package com.bpe.string.encrypt;
 
-import org.jasypt.util.text.StrongTextEncryptor;
+import org.jasypt.util.text.*;
 
 import static java.lang.System.out;
 
@@ -14,7 +14,7 @@ public class App {
             out.println("Usage:  <string to encrypt> <super secret key>");
             return;
         }
-        StrongTextEncryptor textEncryptor = new StrongTextEncryptor();
+        BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
         textEncryptor.setPassword(args[1]);
 
         String myEncryptedText = textEncryptor.encrypt(args[0]);
